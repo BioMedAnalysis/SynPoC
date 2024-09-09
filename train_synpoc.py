@@ -4,7 +4,6 @@ import numpy as np
 
 import os
 
-from backbones.dense_layer import conv2d
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 import torch.autograd as autograd
@@ -298,7 +297,7 @@ def train_syndiff(rank, gpu, args):
     synpoc_disc = nn.parallel.DistributedDataParallel(synpoc_disc, device_ids=[gpu])
 
     exp = args.exp
-    output_path = '/data/shew0029/MedSyn/VQGAN_3D/SynDiff-multi/SynDiff-main/results'
+    output_path = args.output_path
 
     exp_path = os.path.join(output_path, exp)
     if rank == 0:
@@ -586,8 +585,8 @@ if __name__ == '__main__':
 
     # geenrator and training
     parser.add_argument('--exp', default='ixi_synth', help='name of experiment')
-    parser.add_argument('--input_path', help='/data/shew0029/MedSyn/DATA/BRATS/')
-    parser.add_argument('--output_path', help='/data/shew0029/MedSyn/VQGAN_3D/SynDiff-multi/SynDiff-main/results')
+    parser.add_argument('--input_path', help='update input path here')
+    parser.add_argument('--output_path', help='update output path here')
     parser.add_argument('--nz', type=int, default=100)
     parser.add_argument('--num_timesteps', type=int, default=4)
 
