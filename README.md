@@ -2,10 +2,10 @@
 This repo contains the official Pytorch implementation for SynPoC Model.
 ![alt text](figures/SynPoC_Framework.pdf)
 
-**Environment** \n
+**Environment**  <br />
 Please prepare an environment with python>=3.8, and then run the command "pip install -r requirements.txt" for the dependencies.
 
-**Data Preparation** \n
+**Data Preparation**  <br />
 For experiments, extract 2D axial slices from 3D MR images, save them as a .npy file and prepare the dataset folder structure as follows.
 ```
 data/
