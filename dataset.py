@@ -8,8 +8,6 @@ import random
 
 def CreateDatasetSynthesis(phase, input_path):
 
-    input_path = '/data/shew0029/MedSyn/DATA/clinical_lf/'
-    phase = 'train'
     # Load data for contrast1
     target_file = input_path + phase + "/LF_T2.npy"
     data_fs_s1 = LoadDataSet(target_file)
