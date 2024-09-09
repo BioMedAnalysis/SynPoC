@@ -2,10 +2,10 @@
 This repo contains the official Pytorch implementation for SynPoC Model.
 ![alt text](figures/SynPoC_framework.png)
 
-**Environment**  <br />
+**Environment**  <br />  <br />
 Please prepare an environment with python>=3.8, and then run the command "pip install -r requirements.txt" for the dependencies.
 
-**Data Preparation**  <br />
+**Data Preparation**  <br />  <br />
 For experiments, extract 2D axial slices from 3D MR images, save them as a .npy file using [data_process.py](data_process.py) and prepare the dataset folder structure as follows.
 ```
 data/
@@ -33,5 +33,5 @@ Update input_path and output_path in below cmd accordingly
 ```
 python test_synpoc.py --image_size 256 --exp exp_synpoc --num_channels 1 --num_channels_dae 64 --ch_mult 1 1 2 2 4 4 --num_timesteps 4 --num_res_blocks 2 --batch_size 1 --embedding_type positional  --z_emb_dim 256  --which_epoch 0 --gpu_chose 0 --input_path '/synpoc/data/' --output_path '/synpoc/results' 
 ```
-**Acknowledgements**  <br />
+**Acknowledgements**  <br />  <br />
 This repository makes liberal use of code from [Tackling the Generative Learning Trilemma](https://github.com/NVlabs/denoising-diffusion-gan) and [SynDiff](https://github.com/icon-lab/SynDiff).
