@@ -1,6 +1,6 @@
 # GenAI empowers point-of-care MRI: high-fidelity synthetic imaging with multi-site validation
 This repo contains the official Pytorch implementation for SynPoC Model.
-![alt text](figures/SynPoC_Model_framework.png)
+![alt text](figures/SynPoC_Framework.jpg)
 
 **Environment**  <br />  <br />
 Please prepare an environment with python>=3.8, and then run the command "pip install -r requirements.txt" for the dependencies.
